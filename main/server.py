@@ -39,7 +39,8 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
                 '.eot': 'application/vnd.ms-fontobject',
                 '.woff': 'font/woff',
                 '.woff2': 'application/font-woff2',
-                '.svg': 'image/svg+xml'
+                '.svg': 'image/svg+xml',
+                '.mp4': 'video/mp4'
             }
         pathname = urlparse(self.path).path
         folder = os.path.dirname(os.path.realpath(__file__))

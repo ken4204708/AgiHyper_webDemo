@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgriHyper ITRI 2020</title>
   <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="preload" type="image/png" href="9.27.png" as="image">
+  <link rel="preload" type="image/png" href="925_RGB.png" as="image">
 </head>
 
 <body>
   <video id="myVideo" autoplay muted loop>
     <source src="uav.mp4" type="video/mp4">
   </video>
-  <div class="content center">
-    <div id="web-intro" style="text-align: center; margin-top: 100px; padding: 10px;">
+  <div class="main-content center">
+    <div id="web-intro" style="text-align: center; margin-top: 100px; padding: 10px; width: 50%">
       <h1>AgriHyper</h1>
       <p>AgriHyper is an agiculture service website.</p>
       <p>By Analyzing multi-spectral images and hyperspectral images,AgriHyper help our coustomers moitoring the
@@ -29,8 +31,63 @@
     <div id="text-container" class="center main text" style="position: relative;">
       <h1>AgriHyper</h1>
       <p>AgriHyper is an agiculture service website.</p>
-      <p>By Analyzing multi-spectral images and hyperspectral images,AgriHyper help our coustomers moitoring the
-        crops,especially in paddies.</p>
+      <div>
+        <ul id='timeline'>
+          <li class='event up';">
+            <div class='content'>
+              <div id="img1" class="rectangle img1" onmousemove="mouseOver()" onmouseout="mouseOut()" >
+              </div>
+            </div>
+            <div class="dot">
+              <span class='circle'></span>
+            </div>
+            <div class='date'>
+              2019/09/25
+            </div>
+            <div id="img1_tip" class="tip">
+              <p># of bugs: </p>
+            </div>
+          </li>
+          <li class='event down'>
+            <div class='content'>
+              <div class="avatar">
+                me
+              </div>
+            </div>
+            <div class="dot">
+              <span class='circle'></span>
+            </div>
+            <div class='date'>2009</div>
+          </li>
+          <li class='event up'>
+            <div class='content'>
+              <div class="rectangle">
+                me
+              </div>
+            </div>
+            <div class="dot">
+              <span class='circle'></span>
+            </div>
+            <div class='date'>2010</div>
+          </li>
+          <li class='event down'>
+            <div class='content'>
+              <div class="avatar">
+                me
+              </div>
+            </div>
+            <div class="dot">
+              <span class='circle'></span>
+            </div>
+            <div class="date">2011</div>
+          </li>
+          <li class="last">
+            <div class="rectangle">
+              To be continuing ...
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

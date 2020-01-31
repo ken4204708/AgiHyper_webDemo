@@ -1,5 +1,11 @@
 var host = {};
 var t_scroll = 1000;
+var screen_h = 0;
+
+function set_page() {
+	var h = $(window).height() * 1;
+	screen_h = h;
+}
 
 host.BrowserHost = class {
 
@@ -20,56 +26,6 @@ host.BrowserHost = class {
         window.eval = () => {
             throw new Error('window.eval() not supported.');
         };
-
-        let scrool_down_btn = this.document.getElementById('myBtn');
-        let text_container = this.document.getElementById('text-container');
-        // let video = document.getElementById("myVideo");
-        var scrollTop = $(window).scrollTop();
-        var is_scroll = false;
-        if (scrool_down_btn) {
-            scrool_down_btn.addEventListener('click', () => {
-                scrollTop = $(window).scrollTop();
-                if (scrollTop > 0 && !is_scroll) {
-                    //$('.js-iframe-event').css({'position': 'fixed' });
-                    //$('.js-arrow-header').click();
-                    // $('.js-header-bottom-bg').show();
-                    $(text_container).animate({ marginTop: '-50px' }, t_scroll);
-                    // $('.js-header-bottom-bg').animate({ marginBottom: '0px' }, t_scroll);
-                    is_scroll = true;
-                } else if (scrollTop == 0) {
-                    //$('.js-iframe-event').css({'position': 'relative' });
-                    $(text_container).animate({ marginTop: '0px' }, 1000);
-                    // $('.js-header-bottom-bg').animate({ marginBottom: '-50px' }, t_scroll);
-                    is_scroll = false;
-                }
-                // if (video.paused) {
-                //     video.play();
-                //     btn.innerHTML = "Pause";
-                // } else {
-                //     video.pause();
-                //     btn.innerHTML = "Play";
-                // }
-            });
-        }
-
-        // $(window).scroll(function () {	
-        //     scrollTop = $(window).scrollTop();
-        //     if ($('.js-block-content') && $('.js-header-menu').css('display') != 'none') {
-        //         if (scrollTop > 0 && !is_scroll)  {
-        //             //$('.js-iframe-event').css({'position': 'fixed' });
-        //             //$('.js-arrow-header').click();
-        //             $('.js-header-bottom-bg').show();
-        //             $('.js-block-content').animate({marginTop: '-50px'}, t_scroll);
-        //             $('.js-header-bottom-bg').animate({marginBottom: '0px'}, t_scroll);
-        //             is_scroll = true;
-        //         } else if( scrollTop == 0 ) {
-        //             //$('.js-iframe-event').css({'position': 'relative' });
-        //             $('.js-block-content').animate({marginTop: '0px'}, 1000);
-        //             $('.js-header-bottom-bg').animate({marginBottom: '-50px'}, t_scroll);
-        //             is_scroll = false;
-        //         }
-        //     }
-        // });
     }
 
     get document() {
@@ -112,3 +68,39 @@ host.BrowserHost = class {
 }
 
 window._host_ = new host.BrowserHost();
+$(function(){
+    $(window).resize(set_page);
+	$(window).load(set_page);
+
+	var scrollTop = $(window).scrollTop();
+	var is_scroll = false;
+    
+	$(window).scroll(function () {	
+        scrollTop = $(window).scrollTop();
+        if (scrollTop > 0 && !is_scroll) {
+            $("#text-container").animate({ marginTop: '-50px' }, t_scroll);
+            is_scroll = true;
+        } else if (scrollTop == 0) {
+            $("#text-container").animate({ marginTop: '0px' }, t_scroll);
+            is_scroll = false;
+        }
+	});
+	
+	$('body').on("click", '#myBtn', function(){
+        $('html, body').animate({scrollTop: screen_h-100}, t_scroll);
+        $("#text-container").animate({ marginTop: '-50px' }, t_scroll);
+		is_scroll = true;
+		return false;
+    });
+});
+
+// $('#img1'),addEventListener("mouseover", mouseOver);
+// $('#img1'),addEventListener("mouseout", mouseOut);
+function mouseOver() {
+    $('#img1').animate({ top: '-15px' }, 10);
+    $('#img1_tip').css('display', 'block');
+}
+function mouseOut() {
+    $('#img1').animate({ top: '0px' }, 10);
+    $('#img1_tip').css('display', 'none');
+}

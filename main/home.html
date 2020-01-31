@@ -8,6 +8,9 @@
   <link rel="stylesheet" type="text/css" href="home.css">
   <link rel="preload" type="image/png" href="9.27.png" as="image">
   <link rel="preload" type="image/png" href="925_RGB.png" as="image">
+  <link rel="preload" type="image/png" href="1002_RGB.jpg" as="image">
+  <link rel="preload" type="image/png" href="1005_RGB.png" as="image">
+  <link rel="preload" type="image/png" href="925_NDVI.png" as="image">
 </head>
 
 <body>
@@ -15,27 +18,27 @@
     <source src="uav.mp4" type="video/mp4">
   </video>
   <div class="main-content center">
-    <div id="web-intro" style="text-align: center; margin-top: 100px; padding: 10px; width: 50%">
+    <div id="web-intro" style="text-align: center; margin-top: 250px; padding: 10px;">
       <h1>AgriHyper</h1>
       <p>AgriHyper is an agiculture service website.</p>
       <p>By Analyzing multi-spectral images and hyperspectral images,AgriHyper help our coustomers moitoring the
         crops,especially in paddies.</p>
     </div>
-    <div id="button-container" style="text-align: center; margin-top: 200px; padding: 10px;">
-      <button id="myBtn">Pause</button>
+    <div id="button-container" style="text-align: center; margin-top: 10%; padding: 10px;">
+      <button id="myBtn">Check More details</button>
     </div>
   </div>
 
   <!-- <div class="bg-block-center main block-content js-block-content content" style="margin-top: -50px;"> -->
   <div class="main">
     <div id="text-container" class="center main text" style="position: relative;">
-      <h1>AgriHyper</h1>
-      <p>AgriHyper is an agiculture service website.</p>
+      <h1>RGB image & NDVI image</h1>
+      <p>Please move your curser to each RGB image and then you can see the corresponding NDVI image</p>
       <div>
         <ul id='timeline'>
           <li class='event up';">
             <div class='content'>
-              <div id="img1" class="rectangle img1" onmousemove="mouseOver()" onmouseout="mouseOut()" >
+              <div id="img1" class="rectangle img1" onmousemove="mouseOver(1)" onmouseout="mouseOut(1)" >
               </div>
             </div>
             <div class="dot">
@@ -44,42 +47,45 @@
             <div class='date'>
               2019/09/25
             </div>
-            <div id="img1_tip" class="tip">
-              <p># of bugs: </p>
-            </div>
+            <div id="img1_tip" class="rectangle img1_NDVI" style="display: none;"></div>
           </li>
-          <li class='event down'>
-            <div class='content'>
-              <div class="avatar">
-                me
-              </div>
-            </div>
-            <div class="dot">
-              <span class='circle'></span>
-            </div>
-            <div class='date'>2009</div>
-          </li>
+          <li style="min-width: 5px;"></li>
           <li class='event up'>
             <div class='content'>
-              <div class="rectangle">
-                me
+              <div id="img2" class="rectangle img2" onmousemove="mouseOver(2)" onmouseout="mouseOut(2)">
               </div>
             </div>
             <div class="dot">
               <span class='circle'></span>
             </div>
-            <div class='date'>2010</div>
+            <div class='date'>
+              2019/09/27
+            </div>
+            <div id="img2_tip" class="rectangle img2_NDVI" style="display: none;"></div>
           </li>
-          <li class='event down'>
+          <li style="min-width: 5px;"></li>
+          <li class='event up'>
             <div class='content'>
-              <div class="avatar">
-                me
+              <div id="img3" class="rectangle img3" onmousemove="mouseOver(3)" onmouseout="mouseOut(3)">
               </div>
             </div>
             <div class="dot">
               <span class='circle'></span>
             </div>
-            <div class="date">2011</div>
+            <div class='date'>2019/10/02</div>
+            <div id="img3_tip" class="rectangle img3_NDVI" style="display: none;"></div>
+          </li>
+          <li style="min-width: 5px;"></li>
+          <li class='event up'>
+            <div class='content'>
+              <div id="img4" class="rectangle img4" onmousemove="mouseOver(4)" onmouseout="mouseOut(4)">
+              </div>
+            </div>
+            <div class="dot">
+              <span class='circle'></span>
+            </div>
+            <div class="date">2019/10/05</div>
+            <div id="img4_tip" class="rectangle img4_NDVI" style="display: none;"></div>
           </li>
           <li class="last">
             <div class="rectangle">

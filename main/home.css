@@ -54,13 +54,13 @@
     top: 100%;
     background: #ffffff;
     width: 100%;
-    height: 100%;
+    height: 85%;
     padding: 25px;
     text-align: center;
   }
 
   .main.text {
-    background: #32dc69;
+    background: #e6e6e6;
     margin-top: 0px;
     width: 90%;
     height: 100%;
@@ -69,9 +69,10 @@
   }
   
   #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
+    /* width: 200px; */
+    height: 0px;
+    font-size: 26px;
+    /* padding: 10px; */
     border: none;
     background: #000;
     color: #fff;
@@ -1751,8 +1752,8 @@
     list-style: none;
     width: 100%;
     height: 200px;
-    margin: 250px 0 0;
-    border-top: 6px solid #bada55;
+    margin: 320px 0 0;
+    border-top: 6px solid #9819ca;
     display: table;
     /* border-spacing: 30px 0; */
   }
@@ -1769,8 +1770,7 @@
     right: 0;
     width: 10px;
     height: 10px;
-    background: #fffff0;
-    border: 6px solid #f98262;
+    background: #0c082c;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -1809,7 +1809,7 @@
     top: -10px;
   }
   li.down .content:before {
-    border-left: 4px solid #f98262;
+    border-left: 4px solid #6285f9;
     -webkit-border-radius: 0 20px;
     -moz-border-radius: 0 20px;
   }
@@ -1826,8 +1826,8 @@
     height: 100%;
   }
   li.up .content:before {
-    border-left: 4px solid #f98262;
-    top: 175px;
+    border-left: 4px solid #9e47d1;
+    top: 190px;
   }
   li.up .date {
     margin-top: 53px;
@@ -1838,7 +1838,6 @@
   }
   
   .rectangle {
-    border: 1px solid #f98262;
     height:100%;
     width: 100%;
     position: relative;
@@ -1875,12 +1874,40 @@
     text-indent: 20px;
   }
 
+  .NDVI {
+    top: 60px;
+  }
+
   .img1 {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("925_RGB.png") center center no-repeat;
     background-size: cover;
   }
-  .img3 {
+  .img2 {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("9.27.png") center center no-repeat;
+    background-size: cover;
+  }
+  .img3 {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("1002_RGB.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .img4 {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("1005_RGB.png") center center no-repeat;
+    background-size: cover;
+  }
+  .img1_NDVI {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("925_NDVI.png") center center no-repeat;
+    background-size: cover;
+  }
+  .img2_NDVI {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("925_NDVI.png") center center no-repeat;
+    background-size: cover;
+  }
+  .img3_NDVI {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("925_NDVI.png") center center no-repeat;
+    background-size: cover;
+  }
+  .img4_NDVI {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("925_NDVI.png") center center no-repeat;
     background-size: cover;
   }
   

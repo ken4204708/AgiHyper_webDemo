@@ -78,7 +78,7 @@ $(function(){
 	$(window).scroll(function () {	
         scrollTop = $(window).scrollTop();
         if (scrollTop > 0 && !is_scroll) {
-            $("#text-container").animate({ marginTop: '-50px' }, t_scroll);
+            $("#text-container").animate({ marginTop: '-100px' }, t_scroll);
             is_scroll = true;
         } else if (scrollTop == 0) {
             $("#text-container").animate({ marginTop: '0px' }, t_scroll);
@@ -87,8 +87,8 @@ $(function(){
 	});
 	
 	$('body').on("click", '#myBtn', function(){
-        $('html, body').animate({scrollTop: screen_h-100}, t_scroll);
-        $("#text-container").animate({ marginTop: '-50px' }, t_scroll);
+        $('html, body').animate({scrollTop: screen_h-80}, t_scroll);
+        $("#text-container").animate({ marginTop: '-100px' }, t_scroll);
 		is_scroll = true;
 		return false;
     });
@@ -96,11 +96,41 @@ $(function(){
 
 // $('#img1'),addEventListener("mouseover", mouseOver);
 // $('#img1'),addEventListener("mouseout", mouseOut);
-function mouseOver() {
-    $('#img1').animate({ top: '-15px' }, 10);
-    $('#img1_tip').css('display', 'block');
+function mouseOver(num) {
+    var index_img = "#img";
+    switch(num) {
+        case 1:
+            index_img = index_img + '1';
+            break;
+        case 2:
+            index_img = index_img + '2';
+            break;
+        case 3:
+            index_img = index_img + '3';
+            break;
+        case 4:
+            index_img = index_img + '4';
+            break;
+    }
+    $(index_img).animate({ top: '-15px' }, 10);
+    $(index_img+'_tip').css('display', 'block');
 }
-function mouseOut() {
-    $('#img1').animate({ top: '0px' }, 10);
-    $('#img1_tip').css('display', 'none');
+function mouseOut(num) {
+    var index_img = "#img";
+    switch(num) {
+        case 1:
+            index_img = index_img + '1';
+            break;
+        case 2:
+            index_img = index_img + '2';
+            break;
+        case 3:
+            index_img = index_img + '3';
+            break;
+        case 4:
+            index_img = index_img + '4';
+            break;
+    }
+    $(index_img).animate({ top: '0px' }, 10);
+    $(index_img+'_tip').css('display', 'none');
 }
